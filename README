@@ -1,0 +1,55 @@
+README file - ECE1387 Assignment1 Maze Router 
+- developer:	Zhiyuan Gu
+- date:			Oct 11, 2019
+
+1. File list:
+-------------
+main.cpp
+Routing.cpp
+RoutePath.cpp
+track.cpp
+draw.cpp
+graphics.cpp
+Routing.h
+RoutePath.h
+track.h
+draw.h
+graphics.h
+easygl_constrants.h
+makefile
+cct1
+cct2
+cct3
+cct4
+README
+report.pdf
+
+2. Steps to compile and run the router for one of the test files
+---------------------------------------------------------------------------
+1) Type "make" in the source file folder to compile the code.
+2) Type "./MR" to run the executable.
+3) When message asking for input file path shows up, type "cct1" or other files.
+4) Graphics tool window should show up. Press "Proceed" to start printing routing result.
+5) Four new buttons "Next Path", "PreviousPath", "All Paths", "Rewind" should show up
+    "Next Path": Print next path
+    "PreviousPath": Return to the previous path
+    "All Paths": Print all paths
+    "Rewind": Rewind to the beginning
+   Press "Proceed" or "Exit" at any time to close the graphics window
+
+3. Configure the router to perform different tests
+-------------------------------------------------------------
+The first few lines in the main function in main.cpp can be used to configure the router to perform different tests.
+    // configuration
+    bool q1 = 1;                         // question1 switch to do simple routing task
+    bool q1_graphics = 1;                // question1 graphics switch to open graphics tool
+    bool q1_detailPrint = 0;             // print out detailed information for q1
+    bool q2 = 0;                         // question2 switch to find smallest channel width when Wv = Wh
+    bool q3 = 0;                         // question3 switch to find smallest channel width when allowing Wv != Wh
+    bool manhattan = 1;                  // switch to turn on Manhattan distance ordering
+    int optL_max = 1000;                 // allowed maximum shuffle time
+Compile again if you changed any of the configurations.
+Note if q2 or q3 is turned on, program will ask you to input number of shuffling for optimization.
+
+Thank you for reading!
+
